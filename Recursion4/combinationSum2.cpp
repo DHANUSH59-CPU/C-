@@ -26,7 +26,6 @@ void findCombination(int idx,int target,vector<int> &arr, vector<vector<int>> &a
             ans.push_back(ds);
             return;
     }
-
     for(int i=idx;i<arr.size();i++){
         if(i>idx && arr[i]==arr[i-1]) continue;
         if(arr[i]>target) break;

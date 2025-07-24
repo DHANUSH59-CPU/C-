@@ -28,12 +28,11 @@ void findCombination(int idx,int target,vector<int> &arr, vector<vector<int>> &a
         return;
     }
 
-    if(arr[idx]<=target){
+    if(arr[idx] <= target){
         ds.push_back(arr[idx]);
         findCombination(idx,target-arr[idx],arr,ans,ds);
         ds.pop_back();
     }
-
     findCombination(idx+1,target,arr,ans,ds);
 }
 vector<vector<int>> combination(vector<int> &arr,int target){
