@@ -3,7 +3,7 @@
 using namespace std;
 
 int f(int t){
-    if(t == 0) return 1; // Every time the Target becomes 0 in the tree, it is a step
+    if(t == 0) return 1; // Every time the Target becomes 0 in the tree, it is a way
     int sum = 0;
     for(int i = 1; i <= 6; i++){
         if(t - i < 0) break;
