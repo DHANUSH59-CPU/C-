@@ -30,7 +30,7 @@ void findCombination(int idx,int target,vector<int> &arr, vector<vector<int>> &a
 
     if(arr[idx] <= target){
         ds.push_back(arr[idx]);
-        findCombination(idx,target-arr[idx],arr,ans,ds);
+        findCombination(idx, target-arr[idx], arr, ans, ds);
         ds.pop_back();
     }
     findCombination(idx+1,target,arr,ans,ds);

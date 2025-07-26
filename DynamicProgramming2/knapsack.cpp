@@ -11,14 +11,15 @@ int f(vector<int> w , vector<int> val , int idx , int W){
         return 0;
     }
 
+    // Similar to house robber
+
     if(dp[idx][W] != -1) return dp[idx][W];
     int ans = INT_MIN;
     // not pick
-    ans = max(ans , f(w , val , idx + 1 , W));
+    ans = max(ans , f(w, val, idx + 1, W));
     // pick
     if(w[idx] <= W){
-        
-        ans = max(ans , val[idx] + f(w , val , idx +1 , W - w[idx]));
+        ans = max(ans, val[idx] + f(w , val, idx + 1, W - w[idx]));
     }
 
     return dp[idx][W] = ans;
@@ -39,6 +40,7 @@ int fbu(vector<int> w , vector<int> val , int idx , int W){
                 ans = max(ans , val[i] + dp[i + 1][j - w[i]]);
           }
           dp[i][j] = ans;
+          
         }
     }
     return dp[0][W];
@@ -69,13 +71,13 @@ int main() {
 
     dp.clear();
     dp.resize(n + 1, vector<int>(W + 1, -1));
-    dp.clear();
-    dp.resize(n + 1, vector<int>(W + 1, 0));  // Bottom-up
+    // dp.clear();
+    // dp.resize(n + 1, vector<int>(W + 1, 0));  // Bottom-up
 
     // int maxProfit = knapsackRec(weights, values, n, W);
     // cout << maxProfit << endl;
 
-    cout << fbu(weights,values ,0 , W);
+    cout << f(weights,values ,0 , W);
 
     return 0;
 }

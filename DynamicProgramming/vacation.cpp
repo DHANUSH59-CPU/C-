@@ -13,6 +13,7 @@ int main(){
     cin >> a >>b >>c;
     dp[0][0] = a;
     dp[0][1] = b;
+    
     dp[0][2] = c;
     
     for(int i = 1; i < n; i++){

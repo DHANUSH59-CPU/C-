@@ -8,7 +8,7 @@ int f(int n,int k,int t){
     if(t == 0 && n == 0) return 1;
     if(n == 0) return 0;
     int sum = 0;
-    for(int i = 1; i<=k; i++){
+    for(int i = 1; i <= k; i++){
         if(t - i < 0) continue;
         sum += f(n-1,k,t-i);
     }
@@ -18,6 +18,9 @@ int f(int n,int k,int t){
 vector<vector<int>> dp;
 
 int ftd(int n, int k, int t){
+
+    // This is number of ways problem, unlike coin change which is number of steps problem
+    
     if(t == 0 && n == 0) return 1;
     if(n == 0) return 0;
     int sum = 0;

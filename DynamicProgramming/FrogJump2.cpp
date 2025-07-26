@@ -1,7 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-
 vector<int> h;
 vector<int> dp;
 int f(int i, int k){
@@ -16,7 +14,7 @@ int f(int i, int k){
         if(i + j >= h.size()) break;
         ans = min(ans, abs(h[i] - h[i + j]) + f(i + j , k));
     }
-    
+
     return dp[i] = ans;
 }
 

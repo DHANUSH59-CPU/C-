@@ -14,9 +14,7 @@ int f(int n){
         if(n - coins[i] < 0) continue;
         result = min(result, f(n - coins[i]));
     }
-
     return 1 + result;
-    
 }
 
 vector<int> dp;
