@@ -10,7 +10,7 @@ int main(){
     cout<<"Enter the string :";
     getline(cin,s);
     cout<<s<<endl;
-    int n=s.length();
+    int n = s.length();
     stringstream ss(s);
     int temp;
     vector<int> arr;
@@ -26,7 +26,7 @@ int main(){
 
     // prefix sum
     for(int i=1;i<arr.size();i++){
-        arr[i]=arr[i]+arr[i-1];
+        arr[i] = arr[i] + arr[i-1];
     }
 
     cout<<"Prefix sum :"<<endl;
