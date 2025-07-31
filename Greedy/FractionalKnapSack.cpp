@@ -15,7 +15,7 @@ double FractionalKnapsack(vector<int> &profit, vector<int> & weights, int n, int
     vector<pair<int,int>> arr;
 
     for(int i = 0; i < n; i++){
-        arr.push_back({profit[i],weights[i]});
+        arr.push_back({profit[i], weights[i]});
     }
 
     sort(arr.begin() , arr.end() , cmp);
