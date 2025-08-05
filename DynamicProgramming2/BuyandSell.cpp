@@ -8,7 +8,7 @@ int f(int i, int k, bool on){
 
     int ans = INT_MIN;
     // not include
-    ans = f(i + 1, k, on); // avoid
+    ans = max(ans, f(i + 1, k, on)); // avoid
 
     // not avoid
     if(on){
